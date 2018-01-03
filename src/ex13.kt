@@ -9,7 +9,7 @@ private fun romanToInt(s: String): Int {
     table.put('D',500)
     var res = 0
     for((index,value) in s.withIndex()){
-        if(index==s.length-1|| table[value]!! >table[s[index+1]]!!){
+        if(index==s.length-1|| table[value]!! >=table[s[index+1]]!!){
             res +=table[value]!!
         }else{
             res -=table[value]!!
@@ -19,5 +19,5 @@ private fun romanToInt(s: String): Int {
 }
 
 fun main(args: Array<String>) {
-    println(romanToInt("VI"))
+    println(romanToInt("DCXXI"))
 }
