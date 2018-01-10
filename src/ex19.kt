@@ -5,11 +5,10 @@
  * }
  */
 
-class ListNode(var `val`: Int = 0) {
+ class ListNode(var `val`: Int = 0) {
          var next: ListNode? = null
      }
-class Solution {
-    fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
+   private fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var p = head
         val stack = arrayListOf<ListNode>()
         while (p!=null){
@@ -21,4 +20,3 @@ class Solution {
         stack[n].next= if(n-2>=0) stack[n-2] else null
         return head
     }
-}
