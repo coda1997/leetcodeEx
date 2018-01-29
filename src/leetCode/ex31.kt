@@ -27,9 +27,3 @@ private fun verse(nums: IntArray,start:Int,end:Int){
     val len = end-start+1
     (0 until len/2).forEach { i -> wap(nums, i = i + start, j = end - i) }
 }
-
-fun main(args: Array<String>) {
-    val nums = intArrayOf(1,3,2)
-    nextPermutation(nums)
-    nums.forEach { print(""+it+" ") }
-}
