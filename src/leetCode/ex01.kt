@@ -6,10 +6,11 @@ private fun twoSum(nums: IntArray, target: Int): IntArray {
         if (valueTable.containsKey(target - value)) {
             return intArrayOf(valueTable[target - value] ?: 0, i)
         } else {
-            valueTable.put(value, i)
+            valueTable[value] = i
         }
     }
     return intArrayOf()
 }
+
 
 
