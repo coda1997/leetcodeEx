@@ -1,12 +1,16 @@
 package leetCode
 
 fun uniquePathsWithObstacles(obstacleGrid: Array<IntArray>): Int {
-    val row = obstacleGrid.size
-    if (row ==0)
-        return 0
-    val col = obstacleGrid[0].size
-    if (row == 1) return col
-    if (col == 1) return row
+    val row = when(obstacleGrid.size){
+        0->return 0
+        1->return obstacleGrid[0].size
+        else->obstacleGrid.size
+    }
+    val col = when(obstacleGrid[0].size){
+        0->return 0
+        1->return row
+        else->obstacleGrid[0].size
+    }
     return uniquePathsWithObstacles(obstacleGrid,1,0,row,col)+ uniquePathsWithObstacles(obstacleGrid,0,1,row,col)
 
 
