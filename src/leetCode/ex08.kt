@@ -2,54 +2,42 @@ package leetCode
 
 // the shitty problem, it's sick
 fun myAtoi(str: String): Int {
-    var res = 0
-    var ptimes = false
-    var plusTimes = 0
-    var flag = 1
-    loop@ for (c in str) {
-        when (c) {
-            ' ' ->{
-                if(!ptimes&&plusTimes==0){
-                    continue@loop
-                }else{
-                    break@loop
-                }
-            }
-            '+'->{
-               if (plusTimes++==0){
-                   continue@loop
-               } else{
-                   return 0
-               }
-            }
-            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' -> {
-                if(res<Int.MAX_VALUE&&(res*10+c.toInt()-48<0)){
-                    return if (flag==1){
-                        Int.MAX_VALUE
-                    }else{
-                        Int.MIN_VALUE
-                    }
-                }
-                ptimes=true
-                res *= 10
-                res += c.toInt()-48
-            }
-            '-' -> {
-                if (plusTimes++==0){
-                    flag=-1
-                }else{
-                    return 0
-                }
-            }
-            else -> return res*flag
+    var index = 0
+    while (index < str.length && str[index] == ' ') {
+        index++
+    }
+    if (index == str.length || (str[index] != '+' && str[index] != '-' && !isNum(str[index]))) {
+        return 0
+    }
+    val symbol = if (str[index] == '-') -1 else 1
+    var res: Int
+    if (!isNum(str[index])) {
+        index++
+    }
+    if (index == str.length||str[index]=='+'||str[index]=='-'||!str[index].isDigit()) return 0
 
+    res = str[index++].toInt() - 48
+    while (index < str.length && isNum(str[index])) {
+
+        if (res>Int.MAX_VALUE/10) {
+            return if (symbol < 0) Int.MIN_VALUE else Int.MAX_VALUE
+        }
+        res *= 10
+        res += str[index].toInt() - 48
+        index++
+        if (res<0) {
+            return if (symbol < 0) Int.MIN_VALUE else Int.MAX_VALUE
         }
     }
 
-    return res*flag
+    return res * symbol
+}
+
+fun isNum(c: Char): Boolean {
+    return c.isDigit()
 }
 
 fun main(args: Array<String>) {
-    println('1'.toInt()-48)
-    println(myAtoi(" - 321"))
+    println('1'.toInt() - 48)
+    println(myAtoi("    10522545459"))
 }
