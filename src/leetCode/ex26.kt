@@ -1,6 +1,6 @@
 package leetCode
 
-fun removeDuplicates(nums: IntArray): Int {
+private fun removeDuplicates(nums: IntArray): Int {
     if (nums.isEmpty()) return 0
     var i = 0
     (1 until nums.size)
