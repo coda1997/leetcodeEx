@@ -2,14 +2,13 @@ package leetCode
 
 /**
  * Definition for singly-linked list.
- * class leetCode.ListNode(var `val`: Int = 0) {
- *     var next: leetCode.ListNode? = null
+ * class leetCode.leetCode.ListNode(var `val`: Int = 0) {
+ *     var next: leetCode.leetCode.ListNode? = null
  * }
  */
 
- class ListNode(var `val`: Int = 0) {
-         var next: ListNode? = null
-     }
+
+
    private fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var p = head
         val stack = arrayListOf<ListNode>()

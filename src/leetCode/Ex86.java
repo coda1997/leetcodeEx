@@ -1,14 +1,7 @@
 package leetCode;
 
 public class Ex86 {
-    static class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode partition(ListNode head, int x) {
         if (head == null || head.next == null) return head;

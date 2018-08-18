@@ -2,8 +2,8 @@ package leetCode
 
 /**
  * Definition for singly-linked list.
- * class leetCode.ListNode(var `val`: Int = 0) {
- *     var next: leetCode.ListNode? = null
+ * class leetCode.leetCode.ListNode(var `val`: Int = 0) {
+ *     var next: leetCode.leetCode.ListNode? = null
  * }
  */
 fun swapPairs(head: ListNode?): ListNode? {
@@ -20,10 +20,10 @@ fun swapPairs(head: ListNode?): ListNode? {
     while (true) {
         p2 = p1?.next ?: break
         p?.next = p2
-        p1.next = p2.next
+        p1?.next = p2.next
         p2.next = p1
         p = p1
-        p1 = p1.next
+        p1 = p1?.next
     }
     return headd
 }

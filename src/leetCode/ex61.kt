@@ -2,32 +2,37 @@ package leetCode
 
 
 fun rotateRight(head: ListNode?, k: Int): ListNode? {
-    if (k==0||head?.next==null) return head
-    var p1 = head
-    var p2 = head
+    if (head?.next == null) return head
+    val dump = ListNode()
+    dump.next = head
 
-    var t = 0
-    while (p1!=null&&t<k){
-        p1=p1.next
-        t++
+    var t1 = head
+    var t2 = head
+    var len = 1
+    while (t1?.next != null) {
+        t1 = t1.next
+        len++
     }
-    while (p1?.next!=null&&p2!=null){
-        p1= p1.next
-        p2= p2.next
+    val kk = k % len
+    for (i in 0 until len - kk - 1) {
+        t2 = t2?.next
     }
-    if (p1==null) return head
-    val res = p2?.next
-    p2?.next=null
-    p1.next=head
-
-    return res
+    dump.next = t2?.next
+    t2?.next = null
+    t1?.next = head
+    return dump.next
 }
 
 
 fun main(args: Array<String>) {
-    val start = ListNode(0)
-    val mid= ListNode(1)
-    start.next=mid
-    mid.next=ListNode(2)
-    rotateRight(start,1).apply { println(this!!.`val`) }
+    val start = ListNode(1)
+    start.next = ListNode(2)
+    start.next?.next = ListNode(3)
+    rotateRight(start, 1).apply {
+        var t = this
+        while (t != null) {
+            println(t.`val`)
+            t = t.next
+        }
+    }
 }

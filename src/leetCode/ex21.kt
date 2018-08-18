@@ -2,8 +2,8 @@ package leetCode
 
 /**
  * Definition for singly-linked list.
- * class leetCode.ListNode(var `val`: Int = 0) {
- *     var next: leetCode.ListNode? = null
+ * class leetCode.leetCode.ListNode(var `val`: Int = 0) {
+ *     var next: leetCode.leetCode.ListNode? = null
  * }
  */
 fun mergeTwoLists(l1: ListNode?, l2: ListNode?): ListNode? {
