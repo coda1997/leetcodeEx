@@ -1,50 +1,44 @@
-import java.util.HashMap;
-import java.util.LinkedList;
+
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Main {
 
-    static class Node{
-        int key;
-        int value;
-    }
+    static class Tri {
+        int a;
+        int b;
+        int c;
 
-    private static LinkedList<Node> linkedList = new LinkedList<>();
-    private static HashMap<Integer, Node> map = new HashMap<>();
+        Tri(int a, int b, int c) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+    }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int scale = in.nextInt();
-
-        while (in.hasNext()){
-            String c = in.next();
-            int key = in.nextInt();
-            if (c.equals("p")){
-                int value = in.nextInt();
-                Node t = new Node();
-                t.key=key;t.value=value;
-                if (map.containsKey(key)){
-                    map.get(key).value=value;
+        int batches = in.nextInt();
+        ArrayList<Tri> list = new ArrayList<>();
+        for (int i = 0; i < batches; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int c = in.nextInt();
+            list.add(new Tri(a, b, c));
+        }
+        int res  = 0;
+        for (Tri tri : list) {
+            for (Tri tri1 : list) {
+                if (tri.a>=tri1.a||tri == tri1) {
                     continue;
                 }
-                if (linkedList.size()>=scale){
-                    Node n=linkedList.removeFirst();
-                    linkedList.addLast(t);
-                    map.remove(n.key);
-                    map.put(key,t);
-                }else {
-                    linkedList.addLast(t);
-                    map.put(key,t);
-                }
-            }else {
-                if(map.containsKey(key)){
-                    Node n = map.get(key);
-                    linkedList.remove(n);
-                    linkedList.addLast(n);
-                    System.out.println(n.value);
-                }else {
-                    System.out.println(-1);
+                if (tri.b<tri1.b&&tri.c<tri1.c){
+                    res++;
+                    break;
                 }
             }
         }
+        System.out.println(res);
+
     }
 }
