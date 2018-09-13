@@ -1,7 +1,7 @@
 package leetCode
 
 private fun removeDuplicates(nums: IntArray): Int {
-    TODO()
+    return nums[0]
 }
 
 fun main(args: Array<String>) {
