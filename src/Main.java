@@ -29,7 +29,7 @@ public class Main {
         int res  = 0;
         for (Tri tri : list) {
             for (Tri tri1 : list) {
-                if (tri.a>=tri1.a||tri == tri1) {
+                if (tri.a >= tri1.a) {
                     continue;
                 }
                 if (tri.b<tri1.b&&tri.c<tri1.c){
