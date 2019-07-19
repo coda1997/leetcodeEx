@@ -1,19 +1,30 @@
 package leetCode
 
 fun removeElements(head: ListNode?, `val`: Int): ListNode? {
-    val dummy = ListNode(`val`-1)
+    val dummy = ListNode(`val` - 1)
     dummy.next = head
-    var temp = head
-    var prev = dummy
-    while (temp != null) {
-        if (temp.`val` == `val`){
-            prev.next = temp.next
-            temp.next = null
-            temp = prev.next
-        }else{
-            prev = temp
-            temp = temp.next
+    var cur: ListNode? = dummy
+    while (cur?.next != null) {
+        if (cur.next.`val` == `val`) {
+            val t = cur.next.next
+            cur.next = t
+        } else {
+            cur = cur.next
         }
     }
+
     return dummy.next
+}
+
+fun main(args: Array<String>) {
+    val head = ListNode(1)
+    head.next = ListNode(1)
+    removeElements(head, 1).apply {
+        var cur = this
+        while (cur != null) {
+            print(cur.`val`)
+            cur = cur.next
+        }
+
+    }
 }
