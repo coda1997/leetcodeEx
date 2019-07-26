@@ -10,9 +10,9 @@ fun maxProduct(nums: IntArray): Int {
     (1 until nums.size).forEach {item->
         val it = nums[item]
         val t = max
-        max = Math.max(Math.max(max * it, min * it), it)
-        min = Math.min(Math.min(t * it, min * it), it)
-        res = Math.max(res, max)
+        max = kotlin.math.max(kotlin.math.max(max * it, min * it), it)
+        min = kotlin.math.min(kotlin.math.min(t * it, min * it), it)
+        res = kotlin.math.max(res, max)
     }
     return res
 }
