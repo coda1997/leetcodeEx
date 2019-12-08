@@ -1,48 +1,70 @@
-fun removeDuplicates(nums: IntArray): Int {
-    var t = 0
-    if (nums.size<=1){
-        return t
+fun subtractProductAndSum(n: Int): Int {
+    var res1 = 1
+    var res2 = 0
+    var t = n
+    var tt = 0
+    while (t!=0){
+        tt=t%10
+        res1*=tt
+        res2+=tt
+        t/=10
     }
-    (1 until nums.size).forEach {
-        if (nums[t]!=nums[it]){
-            nums[++t]=nums[it]
-        }
-    }
-    return t
+    return res1-res2
 }
 
-fun maxProfit(prices: IntArray): Int {
-    var res = 0
-    for (i in 1 until prices.size){
-        val temp = prices[i] - prices[i - 1]
-        if (temp >0){
-            res+= temp
+fun groupThePeople(groupSizes: IntArray): List<List<Int>> {
+    val t = HashMap<Int,MutableList<Int>>()
+    for (i in groupSizes.indices){
+        if (t.containsKey(groupSizes[i])){
+            t[groupSizes[i]]?.add(i)
+        }else{
+            t[groupSizes[i]]= mutableListOf(i)
+        }
+    }
+    val res = mutableListOf<List<Int>>()
+    for(k in t.keys){
+        var p = 0
+        var pp = mutableListOf<Int>()
+        for (e in t[k]!!){
+            pp.add(e)
+            p++
+            if (p==k){
+                res.add(pp)
+                pp= mutableListOf()
+                p=0
+            }
         }
     }
     return res
 }
 
-fun rotate(nums: IntArray, k: Int): Unit {
-    if (nums.isEmpty()) return
-    val kk = k%nums.size
-    var temp = 0
-    for (i in 0 until kk){
-        var j = 1
-        var tt:Int=j*kk+i
-        while (j*kk+i<nums.size){
-            temp = nums[tt]
-            nums[tt]=nums[tt-kk]
-            tt=(++j)*kk+i
+fun smallestDivisor(nums: IntArray, threshold: Int): Int {
+    val maxp = nums.sumBy { divide(it, threshold) }
+    val minp = nums.sum()/threshold
+    var p = 0
+    for (i in minp .. maxp){
+        if (i==0){
+            continue
         }
-        nums[(j*kk+i)%nums.size]=temp
+        p = nums.sumBy { divide(it, i) }
+        if (p<=threshold){
+            return i
+        }
+    }
+    return maxp
+}
+
+fun divide(a:Int,b:Int):Int{
+    val t= a%b
+    return if (t!=0){
+        a/b+1
+    }else{
+        a/b
     }
 }
 
-fun main(args: Array<String>) {
-    val nums = intArrayOf(1, 1, 2,-1,0)
-//    removeDuplicates(nums).apply { println(this) }
-//    nums.forEach { print("$it ") }
-    //maxProfit(intArrayOf(1,2,3,4)).apply { println(this) }
-    rotate(nums,3)
-    nums.forEach { print(" $it") }
+fun main() {
+    smallestDivisor(intArrayOf(1,2,5,9),6).apply { println(this) }
+    smallestDivisor(intArrayOf(2,3,5,7,11),11).apply { println(this) }
+    smallestDivisor(intArrayOf(19),5).apply { println(this) }
 }
