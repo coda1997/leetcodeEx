@@ -28,7 +28,7 @@ private fun dfs(board: Array<CharArray>): Boolean {
 }
 
 private fun isValidSudoku(board: Array<CharArray>, num: Char, r: Int, c: Int): Boolean {
-    (0 until 9).forEach {
+    for (it in 0 until 9) {
         if (board[r][it] == num || board[it][c] == num) {
             return false
         }

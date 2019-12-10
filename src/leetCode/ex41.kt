@@ -12,7 +12,7 @@ fun firstMissingPositive(nums: IntArray): Int {
         i++
     }
     for ((index, value) in nums.withIndex()) {
-        if (index != (value - 1)) {
+        if (index != value - 1) {
             return index + 1
         }
     }

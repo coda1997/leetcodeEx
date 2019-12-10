@@ -5,7 +5,7 @@ import kotlin.test.assertEquals
 
 fun numSquares(n: Int): Int {
     val t = IntArray(n+1)
-    for (i in 1 until (n+1)){
+    for (i in 1 until n+1){
         t[i]=i
         var j = 1
         while (j*j<=i){
