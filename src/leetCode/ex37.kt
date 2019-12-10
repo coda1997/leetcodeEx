@@ -7,8 +7,8 @@ fun solveSudoku(board: Array<CharArray>) {
 }
 
 private fun dfs(board: Array<CharArray>): Boolean {
-    (board.indices).forEach { row ->
-        (board[0].indices).forEach { col ->
+    for (row in board.indices) {
+        for (col in board[0].indices) {
             if (board[row][col] == '.') {
                 for (it in '1' .. '9') {
                     if (isValidSudoku(board, it, row, col)) {
