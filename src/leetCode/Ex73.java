@@ -1,7 +1,7 @@
 package leetCode;
 
 public class Ex73 {
-    public void setZeroes(int[][] matrix) {
+    private void setZeroes(int[][] matrix) {
 
         int r=-1,c=-1;
 
@@ -9,7 +9,8 @@ public class Ex73 {
             for (int j  = 0;j<matrix[i].length;j++){
                 if (matrix[i][j]==0){
                    if (r == -1){
-                       r=i;c=j;
+                       r=i;
+                       c=j;
                    }else {
                        matrix[r][j]=0;
                        matrix[i][c]=0;
@@ -26,14 +27,11 @@ public class Ex73 {
                 }
             }
         }
-        for (int i = 0;i<matrix.length;i++){
-            if (matrix[i][c]==0){
-                for (int j = 0; j < matrix[i].length; j++) {
-                    matrix[i][j] = 0;
-                }
-            }
-
-        }
+//        for (int i = 0;i<matrix.length;i++){
+//            if (matrix[i][c]==0){
+//            }
+//
+//        }
         for (int i = 0;i<matrix.length;i++){
             matrix[i][c]=0;
         }

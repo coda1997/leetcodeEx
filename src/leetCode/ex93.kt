@@ -1,7 +1,7 @@
 package leetCode
 
 fun restoreIpAddresses(s: String): List<String> {
-    var res = mutableListOf<String>()
+    val res = mutableListOf<String>()
     dfs(3, s, "", res)
     return res
 }
@@ -11,7 +11,7 @@ fun dfs(k: Int, s: String, temp: String, res: MutableList<String>) {
         return
     }
     if (k == 0) {
-        if ((s[0]=='0'&&s.length!=1)||s.toInt() > 255) {
+        if (s[0]=='0'&&s.length!=1 ||s.toInt() > 255) {
             return
         }
         res.add("$temp.$s")

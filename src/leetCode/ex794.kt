@@ -27,7 +27,7 @@ fun checkWin(board: Array<String>):Int{
         if(row=="XXX"||row=="OOO"){
             rowWin++
         }
-        if ((board[0][i]==board[1][i])&&board[1][i]==board[2][i]){
+        if (board[0][i]==board[1][i] &&board[1][i]==board[2][i]){
             rowWin++
         }
     }

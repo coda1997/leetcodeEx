@@ -3,8 +3,7 @@ package leetCode
 fun findReplaceString(S: String, indexes: IntArray, sources: Array<String>, targets: Array<String>): String {
     var base = 0
     var res = S
-    
-    for(j in 0 until  indexes.size){
+    for(j in indexes.indices){
         val i = indexes[j]
         val index = i+base
         if (res.substring(index,index+sources[j].length)==sources[j]){

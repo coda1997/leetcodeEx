@@ -2,7 +2,7 @@ package leetCode;
 
 public class Ex92 {
 
-    public ListNode reverseBetween(ListNode head, int m, int n) {
+    private ListNode reverseBetween(ListNode head, int m, int n) {
         if(head==null){
             return head;
         }
@@ -21,7 +21,8 @@ public class Ex92 {
             return head;
         }
         ListNode tt = cur;
-        cur=cur.next;i++;
+        cur=cur.next;
+        i++;
         while (cur!=null&&i<=n){
             ListNode temp = cur.next;
             cur.next=tt;

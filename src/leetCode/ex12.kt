@@ -16,9 +16,9 @@ private fun intToRoman(num: Int): String {
     )
     )
     var roman = ""
-    roman += s[3][(num / 1000) % 10]
-    roman += s[2][(num / 100) % 10]
-    roman += s[1][(num / 10) % 10]
+    roman += s[3][num / 1000 % 10]
+    roman += s[2][num / 100 % 10]
+    roman += s[1][num / 10 % 10]
     roman += s[0][num % 10]
     return roman
 }

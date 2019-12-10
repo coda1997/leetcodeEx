@@ -19,14 +19,14 @@ fun binarySearch(nums: IntArray,left:Int,right:Int,target: Int):Boolean{
         return binarySearch(nums, left+1, right, target)
     }
     return if (mt<target) {
-        if (nums[left] in (mt + 1) until target){
+        if (nums[left] in mt + 1 until target){
             binarySearch(nums,left,mid-1,target)
         }else{
             binarySearch(nums,mid+1,right,target)
         }
     }
     else if (mt>target) {
-        if (nums[left] in (target + 1) until mt){
+        if (nums[left] in target + 1 until mt){
             binarySearch(nums, mid+1, right, target)
         }else{
             binarySearch(nums,left,mid-1,target)

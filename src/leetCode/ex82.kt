@@ -7,12 +7,9 @@ class Solution83{
         }
         val dump = ListNode(head.`val`-1)
         var cur = head
-        var pre = dump
-        var temp = dump
+//        val pre = dump
         while (cur!=null){
-           if (pre.`val`==cur.`val`){
 
-           }
             cur=cur.next
         }
         return dump.next
@@ -23,7 +20,7 @@ fun main(args: Array<String>) {
     val head = ListNode(1)
     var cur :ListNode?= head
     val arrays = intArrayOf(2,3,3,4,4,5)
-    (0 until 6).forEach {
+    for (it in 0 until 6) {
         cur?.next = ListNode(arrays[it])
         cur= cur?.next
     }

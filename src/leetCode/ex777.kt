@@ -8,7 +8,7 @@ fun canTransform(start: String, end: String): Boolean {
     var p2 = findX(end, -1)
     while (p1>-1&&p2>-1){
         if (p2>p1){
-            for (i in (p1+1) .. p2){
+            for (i in p1+1.. p2){
                 if (start[i]=='R'){
                     return false
                 }

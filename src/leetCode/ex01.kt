@@ -14,10 +14,9 @@ private fun twoSum(nums: IntArray, target: Int): IntArray {
 
 fun main(args: Array<String>) {
     println("hello world")
-    
-    mutableListOf(1,2).apply{
+    mutableListOf(1, 2).apply {
         add(3)
-    }.forEach{
+    }.forEach {
         println(it)
     }
 }

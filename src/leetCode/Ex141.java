@@ -41,13 +41,10 @@ public class Ex141 {
             return null;
         }
         s = head;
-        do {
-            if (s==f){
-                break;
-
-            }
-            s=s.next;f=f.next;
-        }while (true);
+        while (s != f) {
+            s = s.next;
+            f = f.next;
+        }
         return f;
     }
 }

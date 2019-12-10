@@ -32,7 +32,3 @@ fun calculateMinimumHP(dungeon: Array<IntArray>): Int {
     }
     return if (res[0]-dungeon[0][0]>0) res[0]-dungeon[0][0] else 1
 }
-
-fun main(args: Array<String>) {
-    (6 downTo 1).forEach { println(it) }
-}

@@ -7,10 +7,10 @@ fun solveSudoku(board: Array<CharArray>) {
 }
 
 private fun dfs(board: Array<CharArray>): Boolean {
-    (0 until board.size).forEach { row ->
-        (0 until board[0].size).forEach { col ->
+    (board.indices).forEach { row ->
+        (board[0].indices).forEach { col ->
             if (board[row][col] == '.') {
-                ('1' .. '9').forEach {
+                for (it in '1' .. '9') {
                     if (isValidSudoku(board, it, row, col)) {
                         board[row][col] = it
                         if (dfs(board)) {

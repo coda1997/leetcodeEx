@@ -6,7 +6,7 @@ fun myAtoi(str: String): Int {
     while (index < str.length && str[index] == ' ') {
         index++
     }
-    if (index == str.length || (str[index] != '+' && str[index] != '-' && !isNum(str[index]))) {
+    if (index == str.length || str[index] != '+' && str[index] != '-' && !isNum(str[index])) {
         return 0
     }
     val symbol = if (str[index] == '-') -1 else 1
