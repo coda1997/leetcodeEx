@@ -1,7 +1,7 @@
 package leetCode
 
 class NumMatrix(matrix: Array<IntArray>) {
-    val sumMatrix = Array(matrix.size+1){ IntArray(if (matrix.isEmpty()){1}else{matrix[0].size+1}) }
+    private val sumMatrix = Array(matrix.size+1){ IntArray(if (matrix.isEmpty()){1}else{matrix[0].size+1}) }
 
     init {
         for (row in matrix.indices){
