@@ -1,31 +1,46 @@
 package leetCode
 
-fun sumNumbers(root: TreeNode?): Int {
-    var sum = 0
-    var temp = 0
-    if (root == null) {
-        return sum
-    }
-    var parents = mutableListOf<TreeNode>()
+import java.util.*
+import kotlin.collections.HashSet
+import kotlin.test.assertEquals
 
-    parents.add(root)
-    var children = mutableListOf<TreeNode>()
-    while (parents.isNotEmpty()) {
-        for (p in parents) {
-            p.left?.apply {
-                temp += p.`val`
-                children.add(this)
+fun sumNumbers(root: TreeNode?): Int {
+    var t = 0
+    var tt = 0
+    if (root == null) {
+        return t
+    }
+    val stack = Stack<TreeNode>()
+    val set = HashSet<TreeNode>()
+    stack.add(root)
+    while (stack.isNotEmpty()) {
+        val p = stack.peek()
+        if (set.contains(p)) {
+            t /= 10
+            stack.pop()
+        } else {
+            if (p.left == null && p.right == null) {
+                tt+=t*10+p.`val`
+                stack.pop()
+            }else{
+                t=t*10+p.`val`
+                set.add(p)
             }
-            p.right?.apply {
-                children.add(this)
-                temp += p.`val`
+            if (p.right != null) {
+                stack.push(p.right)
+            }
+            if (p.left != null) {
+                stack.push(p.left)
             }
         }
-        sum = sum * 10 + temp
-        val tt = parents
-        parents = children
-        children = tt
-        children.clear()
     }
-    return sum
+    return tt
 }
+
+fun main() {
+    val root = TreeNode(1)
+    root.left = TreeNode(2)
+    root.right = TreeNode(3)
+    assertEquals(25, sumNumbers(root))
+}
+
