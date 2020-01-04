@@ -1,7 +1,6 @@
 package leetCode
 
 import kotlin.math.*
-import kotlin.test.*
 
 fun maxProfit(k: Int, prices: IntArray): Int {
     if (prices.isEmpty()) {
