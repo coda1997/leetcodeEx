@@ -3,6 +3,7 @@ package course;
 public class OnlyOneNum {
     public int firstUniqChar(String s) {
         int[] c = new int[26];
+        
         for(int i = 0;i<26;i++){
             c[i] = -1;
         }
