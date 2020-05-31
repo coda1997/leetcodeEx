@@ -3,7 +3,6 @@ package leetCode;
 public class QuickSort {
 
     public void quicksort(int[] arr,int left,int right){
-        int len = arr.length;
         //right should be len - 1
         if (left<right){
             int partionIndex = partion(arr, left, right);

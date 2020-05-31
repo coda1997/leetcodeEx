@@ -11,7 +11,6 @@ public class Ex105 {
         }
     }
 
-    private int i=0;
     public TreeNode buildTree2(int[] preorder, int[] inorder) {
         return buildTree(preorder,inorder,0,inorder.length);
     }

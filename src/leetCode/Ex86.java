@@ -36,6 +36,5 @@ public class Ex86 {
     public static void main(String[] args) {
         ListNode t = new ListNode(2);
         t.next=new ListNode(1);
-        ListNode t2=new Ex86().partition(t,2);
     }
 }

@@ -1,6 +1,5 @@
 package leetCode;
 
-import java.util.Objects;
 
 public class ListNode{
     public int val;

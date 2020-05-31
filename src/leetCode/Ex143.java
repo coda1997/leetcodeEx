@@ -12,7 +12,6 @@ public class Ex143 {
         }
 
         ListNode dump = new ListNode(0);
-        ListNode res = dump;
         while (!linkedList.isEmpty()){
             dump.next=linkedList.removeFirst();
             dump=dump.next;

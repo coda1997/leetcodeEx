@@ -19,7 +19,6 @@ public class IsPa {
             }
         }
         var right = reverseNodeAfter(slow);
-        var temp = right;
         var left = head;
         while(left!=null){
             if(left.val!=right.val){

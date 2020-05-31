@@ -22,8 +22,7 @@ public class Ex95 {
     }
     private void dfs(int k,int num,ArrayList<TreeNode> res,TreeNode header){
         
-        TreeNode treeNode = new TreeNode(k);
-
+//
     }
     private int i = 0;
     private int f(int n ){
