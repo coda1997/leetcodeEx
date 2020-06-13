@@ -2,8 +2,7 @@ package course;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
+
 
 public class PerfectSquare {
     public int numSquares(int n) {
