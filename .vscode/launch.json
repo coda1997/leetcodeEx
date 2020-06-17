@@ -1,0 +1,273 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PartitionPalindromeWithCount",
+            "request": "launch",
+            "mainClass": "course.PartitionPalindromeWithCount",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SolveSurround",
+            "request": "launch",
+            "mainClass": "course.SolveSurround",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UpdateMatrix",
+            "request": "launch",
+            "mainClass": "course.UpdateMatrix",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BSTIterator<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.BSTIterator",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BeautfulArray<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.BeautfulArray",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DailyTem<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.DailyTem",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DecodeString<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.DecodeString",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FindLeastNumOfUniqueInts<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.FindLeastNumOfUniqueInts",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FloatFill<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.FloatFill",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IntReverse<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.IntReverse",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IntToI<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.IntToI",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IsPa<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.IsPa",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IsStringRe<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.IsStringRe",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-KthLargest<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.KthLargest",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MaxSubArray<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.MaxSubArray",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NumsIsland<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.NumsIsland",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OnlyOneNum<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.OnlyOneNum",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Recursive<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.Recursive",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RotateMatrix<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.RotateMatrix",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RowKItem<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.RowKItem",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VersionControl<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "course.VersionControl",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex117<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex117",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex44<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex44",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex45<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex45",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex50<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex50",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex59<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex59",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex60<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex60",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex71<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex71",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex72<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex72",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex73<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex73",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex74<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex74",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex86<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex86",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex89<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex89",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex92<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex92",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex95<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex95",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ex96<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.Ex96",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NumberAppearOnce<leetcodeEx_fb364f67>",
+            "request": "launch",
+            "mainClass": "leetCode.NumberAppearOnce",
+            "projectName": "leetcodeEx_fb364f67"
+        }
+    ]
+}
