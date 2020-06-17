@@ -1,6 +1,5 @@
 package course;
 
-import java.util.Queue;
 
 public class SolveSurround {
     public void solve(char[][] board) {

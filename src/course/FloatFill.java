@@ -2,7 +2,6 @@ package course;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 public class FloatFill{
     class Coor{
@@ -38,7 +37,5 @@ public class FloatFill{
         
         return image;
     }
-    public static void main(String[] args) {
-        var t = new FloatFill().floodFill(new int[][]{{0,0,0},{0,0,0}}, 0, 0, 2);
-    }
+
 }
