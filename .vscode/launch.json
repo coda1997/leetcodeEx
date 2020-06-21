@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MaxPoints",
+            "request": "launch",
+            "mainClass": "course.MaxPoints",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InsertIntoSortList",
+            "request": "launch",
+            "mainClass": "course.InsertIntoSortList",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LRUCache",
+            "request": "launch",
+            "mainClass": "course.LRUCache",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PartitionPalindromeWithCount",
             "request": "launch",
             "mainClass": "course.PartitionPalindromeWithCount",
