@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PivotIndex",
+            "request": "launch",
+            "mainClass": "course.PivotIndex",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MaxPoints",
             "request": "launch",
             "mainClass": "course.MaxPoints",
