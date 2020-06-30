@@ -1,9 +1,7 @@
-package sword
+package swordtooffer;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
-
--to-offer;
 
 public class FindMinK {
     public int[] getLeastNumbers(int[] arr, int k) {
