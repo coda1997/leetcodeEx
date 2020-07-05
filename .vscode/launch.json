@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StringMatch",
+            "request": "launch",
+            "mainClass": "course.StringMatch",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - IsMatch",
             "request": "launch",
             "mainClass": "swordtooffer.IsMatch",
