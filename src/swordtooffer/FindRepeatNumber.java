@@ -5,6 +5,9 @@ public class FindRepeatNumber{
         int p = 0;
         while(p<nums.length){
             if(nums[p]<0){
+                if(nums[p]<-1){
+                    return p;
+                }
                 p++;
                 continue;
             }
