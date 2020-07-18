@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SummaryRange",
+            "request": "launch",
+            "mainClass": "course.SummaryRange",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Isinterleave",
             "request": "launch",
             "mainClass": "course.Isinterleave",
