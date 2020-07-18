@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Isinterleave",
+            "request": "launch",
+            "mainClass": "course.Isinterleave",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IsPa",
+            "request": "launch",
+            "mainClass": "course.IsPa",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - WorldBreak",
             "request": "launch",
             "mainClass": "course.WorldBreak",
