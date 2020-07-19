@@ -3,7 +3,7 @@ package course;
 public class HIndex {
     public int hIndex(int[] citations) {
         int[] counts = new int[citations.length+1];
-        for (int item : counts) {
+        for (int item : citations) {
             counts[Math.min(citations.length, item)]++;
         }
         int res = citations.length;
