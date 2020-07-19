@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - KthSmallestInBST",
+            "request": "launch",
+            "mainClass": "course.KthSmallestInBST",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SummaryRange",
             "request": "launch",
             "mainClass": "course.SummaryRange",
