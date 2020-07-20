@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CalculateTwo",
+            "request": "launch",
+            "mainClass": "course.CalculateTwo",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - KthSmallestInBST",
             "request": "launch",
             "mainClass": "course.KthSmallestInBST",
