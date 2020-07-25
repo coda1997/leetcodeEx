@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Ex290",
+            "request": "launch",
+            "mainClass": "leetCode.Ex290",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - GameOfLife",
             "request": "launch",
             "mainClass": "course.GameOfLife",
