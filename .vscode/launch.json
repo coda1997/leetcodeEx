@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - GameOfLife",
+            "request": "launch",
+            "mainClass": "course.GameOfLife",
+            "projectName": "leetcodeEx_67440933"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MinArray",
             "request": "launch",
             "mainClass": "course.MinArray",
