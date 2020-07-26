@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LongestIncreasingPath",
+            "request": "launch",
+            "mainClass": "course.LongestIncreasingPath",
+            "projectName": "leetcodeEx_fb364f67"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ex290",
             "request": "launch",
             "mainClass": "leetCode.Ex290",
