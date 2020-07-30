@@ -25,7 +25,7 @@ import java.util.Queue;
 public class Ex126 {
     private Map<String, Integer> map;
     private ArrayList<String> ids;
-    private ArrayList<Integer>[] edges;
+    private ArrayList<ArrayList<Integer>> edges;
 
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         // 搜索算法和回溯都可以
@@ -46,15 +46,15 @@ public class Ex126 {
         ids.add(beginWord);
 
         //then we build the edges
-        edges = new ArrayList[ids.size()];
-        for (int i = 0; i < edges.length; i++) {
-            edges[i] = new ArrayList<Integer>();
+        edges = new ArrayList<>(ids.size());
+        for (int i = 0; i < ids.size(); i++) {
+            edges.add(new ArrayList<Integer>());
         }
-        for (int i = 0; i < edges.length; i++) {
-            for (int j = i+1; j < edges.length; j++) {
+        for (int i = 0; i < edges.size(); i++) {
+            for (int j = i+1; j < edges.size(); j++) {
                 if(checkIsPass(ids.get(i), ids.get(j))){
-                    edges[i].add(j);
-                    edges[j].add(i);
+                    edges.get(i).add(j);
+                    edges.get(j).add(i);
                 }
             }
         }
@@ -77,8 +77,8 @@ public class Ex126 {
                 }
                 res.add(t);
             }else{
-                for (int i = 0; i < edges[last].size(); i++) {
-                    int toP = edges[last].get(i);
+                for (int i = 0; i < edges.get(last).size(); i++) {
+                    int toP = edges.get(last).get(i);
                     //路径的回退会在这里被解决
                     //回退会导致cost[toP] < cost[last]
                     //同样地，路径不是最短的，也会在此被抛弃
@@ -105,7 +105,8 @@ public class Ex126 {
             if(ss[i]!=tt[j]){
                 c++;
             }
-            i++;j++;
+            i++;
+            j++;
         }
         return c==1;
     }
