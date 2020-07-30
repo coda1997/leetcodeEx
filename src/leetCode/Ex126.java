@@ -79,6 +79,9 @@ public class Ex126 {
             }else{
                 for (int i = 0; i < edges[last].size(); i++) {
                     int toP = edges[last].get(i);
+                    //路径的回退会在这里被解决
+                    //回退会导致cost[toP] < cost[last]
+                    //同样地，路径不是最短的，也会在此被抛弃
                     if(cost[last]+1<=cost[toP]){
                         cost[toP] = cost[last]+1;
                         var t = new ArrayList<>(now);
