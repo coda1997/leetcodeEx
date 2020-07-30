@@ -1,5 +1,5 @@
 # leetcodeEx
 [![CodeFactor](https://www.codefactor.io/repository/github/coda1997/leetcodeex/badge/master)](https://www.codefactor.io/repository/github/coda1997/leetcodeex/overview/master)
 
-Answer sheets for ![leecode problems](https://leetcode-cn.com/problemset/all/)
+Answer sheets for [leecode problems](https://leetcode-cn.com/problemset/all/)
 
