@@ -24,7 +24,7 @@ public class Ex120 {
         }
         int min = table[0];
         for (int i : table) {
-            min = i<min?i:min;
+            min = Math.min(i, min);
         }
         return min;
     }
