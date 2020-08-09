@@ -1,58 +1,66 @@
 package course;
 
-import java.util.Deque;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
 import leetCode.TreeNode;
 
 public class RecoverTree {
 
     public void recoverTree(TreeNode root) {
-        Deque<TreeNode> stack = new LinkedList<>();
-        Set<TreeNode> set = new HashSet<>();
-        if(root==null){
+        if (root == null) {
             return;
         }
-        stack.push(root);
         TreeNode pre = null;
-        TreeNode i = null,j=null;
+        TreeNode i = null, j = null;
         TreeNode ij1 = null;
+        TreeNode predecessor = null;
         int temp = 0;
-        while(!stack.isEmpty()){
-            var item = stack.pop();
-            if(set.contains(item)){
-                if(pre != null){
-                    if(pre.val>item.val){
-                        if(temp==0){
+        while (root != null) {
+            if (root.left == null) {
+                if (pre != null) {
+                    if (pre.val > root.val) {
+                        if (temp == 0) {
                             i = pre;
-                            ij1 = item;
+                            ij1 = root;
                             temp++;
-                        }else{
-                            j = item;
-                            break;
+                        } else {
+                            j = root;
                         }
                     }
                 }
-                pre = item;
-            }else{
-                set.add(item);
-                if(item.right!=null){
-                    stack.push(item.right);
+                pre = root;
+                root = root.right;
+            } else {
+                predecessor = root.left;
+                while (predecessor.right != null && predecessor.right != root) {
+                    predecessor = predecessor.right;
                 }
-                stack.push(item);
-                if(item.left!=null){
-                    stack.push(item.left);
+                if (predecessor.right == null) {
+                    predecessor.right = root;
+                    root = root.left;
+                } else {
+                    if (pre != null) {
+                        if (pre.val > root.val) {
+                            if (temp == 0) {
+                                i = pre;
+                                ij1 = root;
+                                temp++;
+                            } else {
+                                j = root;
+                            }
+                        }
+                    }
+                    pre = root;
+                    predecessor.right = null;
+                    root = root.right;
                 }
             }
+
         }
-        if(j==null){
+        if (j == null) {
             j = ij1;
         }
         var tt = i.val;
         i.val = j.val;
         j.val = tt;
     }
-    
+
 }
