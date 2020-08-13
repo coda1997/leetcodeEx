@@ -1,13 +1,11 @@
 package course;
 
 import java.util.HashMap;
-import leetCode.Node;
-
 public class CloneGraph {
 
-    private HashMap<Node,Node> map= new HashMap<>();
+    private HashMap<leetCode.Node,leetCode.Node> map= new HashMap<>();
 
-    public Node cloneGraph(Node node) {
+    public leetCode.Node cloneGraph(leetCode.Node node) {
         if(node == null){
             return null;
         }
@@ -15,12 +13,11 @@ public class CloneGraph {
             return map.get(node);
         }
 
-        var temp = new Node(node.val);
+        var temp = new leetCode.Node(node.val);
         map.put(node, temp);
-        for(var item: node.neighbors){
+        for(leetCode.Node item: node.neighbors){
             temp.neighbors.add(cloneGraph(item));
         }
-
         return temp;
     }
 }
