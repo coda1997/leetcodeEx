@@ -40,22 +40,4 @@ public class SurroundedArea {
         dfs(board, i, j-1);
     }
 
-    public static void main(String[] args) {
-        var o = new SurroundedArea();
-        var t = new char[][]{{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
-        var t2 = new char[][]{{'X','O','X'},{'X','O','X'},{'X','O','X'}};
-        var t3 = new char[][]{{'O','X','X','O','X'},
-                                {'X','O','O','X','O'},
-                                {'X','O','X','O','X'},
-                                {'O','X','O','O','O'},
-                                {'X','X','O','X','O'}};
-        o.solve(t3);
-        for (char[] rows : t3) {
-            for (char c : rows) {
-                System.out.print(c);
-            }
-            System.out.println();
-        }
-
-    }
 }
