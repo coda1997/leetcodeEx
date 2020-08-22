@@ -1,11 +1,9 @@
 package leetCode;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Ex679 {
-    private static final int ADD = 0, MUL = 1, DIV = 2, SUB = 3;
+    private static final int ADD = 0, MUL = 1, DIV = 3, SUB = 2;
     private final double EP = 6e-6;
 
     public boolean judgePoint24(int[] nums) {
