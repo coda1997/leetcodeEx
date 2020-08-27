@@ -1,4 +1,4 @@
-package course
+package leetCode;
 
 import java.util.*
 
