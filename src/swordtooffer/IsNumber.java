@@ -9,7 +9,13 @@ public class IsNumber {
          Map<State,Map<CharType, State>> transferMap = new HashMap<>();
 
          //Init
-         Map<CharType, State> s0 = new HashMap<>(){{
+         Map<CharType, State> s0 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 1827838434454106834L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_START);
              put(CharType.CHAR_SIGN, State.STATE_INT_SIGN);
              put(CharType.CHAR_NUMBER, State.STATE_INTEGER);
@@ -17,13 +23,25 @@ public class IsNumber {
          }};
          transferMap.put(State.STATE_START, s0);
          
-         Map<CharType, State> s1 = new HashMap<>(){{
+         Map<CharType, State> s1 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 1808866203758688484L;
+
+             {
              put(CharType.CHAR_NUMBER, State.STATE_INTEGER);
              put(CharType.CHAR_POINT, State.STATE_POINT_WITHOUT_INT);
          }};
          transferMap.put(State.STATE_INT_SIGN, s1);
          
-         Map<CharType, State> s2 = new HashMap<>(){{
+         Map<CharType, State> s2 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = -457711344710194383L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_END);
              put(CharType.CHAR_EXP, State.STATE_EXP);
              put(CharType.CHAR_NUMBER, State.STATE_INTEGER);
@@ -31,43 +49,85 @@ public class IsNumber {
          }};
          transferMap.put(State.STATE_INTEGER, s2);
          
-         Map<CharType, State> s3 = new HashMap<>(){{
+         Map<CharType, State> s3 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = -2482478186740306402L;
+
+             {
              put(CharType.CHAR_NUMBER, State.STATE_FRACTION);
          }};
          transferMap.put(State.STATE_POINT_WITHOUT_INT, s3);
          
-         Map<CharType, State> s4 = new HashMap<>(){{
+         Map<CharType, State> s4 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 280577315830868780L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_END);
              put(CharType.CHAR_EXP, State.STATE_EXP);
              put(CharType.CHAR_NUMBER, State.STATE_FRACTION);
          }};
          transferMap.put(State.STATE_POINT, s4);
          
-         Map<CharType, State> s5 = new HashMap<>(){{
+         Map<CharType, State> s5 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = -3838336673390497433L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_END);
              put(CharType.CHAR_EXP, State.STATE_EXP);
              put(CharType.CHAR_NUMBER, State.STATE_FRACTION);
          }};
          transferMap.put(State.STATE_FRACTION, s5);
          
-         Map<CharType, State> s6 = new HashMap<>(){{
+         Map<CharType, State> s6 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 8151319109322338862L;
+
+             {
              put(CharType.CHAR_SIGN, State.STATE_EXP_SIGN);
              put(CharType.CHAR_NUMBER, State.STATE_EXP_NUM);
          }};
          transferMap.put(State.STATE_EXP, s6);
  
-         Map<CharType, State> s7 = new HashMap<>(){{
+         Map<CharType, State> s7 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 295677663199660038L;
+
+             {
              put(CharType.CHAR_NUMBER, State.STATE_EXP_NUM);
          }};
          transferMap.put(State.STATE_EXP_SIGN, s7);
          
-         Map<CharType, State> s8 = new HashMap<>(){{
+         Map<CharType, State> s8 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = -7363729593309179070L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_END);
              put(CharType.CHAR_NUMBER, State.STATE_EXP_NUM);
          }};
          transferMap.put(State.STATE_EXP_NUM, s8);
          
-         Map<CharType, State> s9 = new HashMap<>(){{
+         Map<CharType, State> s9 = new HashMap<>(){
+             /**
+             *
+             */
+             private static final long serialVersionUID = 6094445344355684538L;
+
+             {
              put(CharType.CHAR_SPACE, State.STATE_END);
          }};
          transferMap.put(State.STATE_END, s9);
