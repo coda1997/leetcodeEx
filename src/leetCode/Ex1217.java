@@ -6,6 +6,6 @@ public class Ex1217 {
         for (int i : position) {
             t[i&1]++;
         }   
-        return Math.min(t[0],t[1]);
+        return (t[0] < t[1]) ? t[0]:t[1];
     }
 }
