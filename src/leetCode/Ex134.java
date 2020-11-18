@@ -3,24 +3,21 @@ package leetCode;
 public class Ex134 {
 
     public int canCompleteCircuit(int[] gas, int[] cost) {
-        int res = 0;
-        int temp = 0;
-        for (int i = 0; i < gas.length; i++) {
-            gas[i] -= cost[i];
-            temp+=gas[i];
-        }
-        if (temp<0){
-            return -1;
-        }
-        temp=0;
-        for (int i = 0; i < gas.length; i++) {
-            temp+=gas[i];
-            if (temp<0){
-                res=i+1;
-                temp=0;
+        int len = gas.length;
+        for(int i = 0;i< len;i++){
+            int g = 0;
+            for(int j = i;j<len+i;j++){
+                int index = j%len;
+                g += gas[index];
+                g -= cost[index];
+                if(g<0){
+                    break;
+                }
+            }
+            if(g>=0){
+                return i;
             }
         }
-
-        return res;
+        return -1;
     }
 }
