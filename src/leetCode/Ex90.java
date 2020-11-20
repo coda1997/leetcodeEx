@@ -41,9 +41,5 @@ public class Ex90 {
         for (int j = 0; j < c; j++) {
             temp.pop();
         }
-    } 
-    public static void main(String[] args) {
-        var o = new Ex90();
-        var t = o.subsetsWithDup(new int[]{1,2,2});
     }
 }
