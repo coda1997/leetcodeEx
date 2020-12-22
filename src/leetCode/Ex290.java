@@ -19,7 +19,7 @@ public class Ex290 {
                     return false;
                 }
             } else {
-                if(set.contains(ss[i])){
+                if (set.contains(ss[i])) {
                     return false;
                 }
                 map.put(item, ss[i]);
@@ -28,6 +28,7 @@ public class Ex290 {
         }
         return true;
     }
+
 
     public static void main(String[] args) {
         var o = new Ex290();
