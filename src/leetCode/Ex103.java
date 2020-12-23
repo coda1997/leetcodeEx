@@ -51,8 +51,7 @@ public class Ex103 {
         var res = o.zigzagLevelOrder(root);
         for (var item :
                 res) {
-            item.forEach(System.out::print);
-            System.out.println();
+            System.out.println(item);
         }
     }
 }
