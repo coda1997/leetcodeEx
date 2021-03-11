@@ -1,33 +1,28 @@
 package temp;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.concurrent.*;
 
 public class Test {
-    public void test(){
-        HashMap<Integer, Integer> map = new HashMap<>();
-        map.get(1);
+    public void test() throws ExecutionException, InterruptedException {
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+        ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+        var scheduledThreadPool = Executors.newScheduledThreadPool(5);
+        var f = fixedThreadPool.submit(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return "hello";
+            }
+        });
+        System.out.println(f.get());
     }
 
-    public int solution(int N) {
-        // write your code in Java SE 8
-        int pre = -1;
-        int i = 0;
-        int res = 0;
-        while(N>0){
-            if((N&1)==1){
-                if(pre>=0){
-                    res = Math.max(res, i-pre-1);
-                }
-                pre = i;
-            }
-            i++;
-            N = N>>1;
-        }
-        return res;
-    }
+
 
     public static void main(String[] args) {
         var o = new Test();
-        System.out.println(o.solution(5));
+
     }
 }
