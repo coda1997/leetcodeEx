@@ -1,5 +1,6 @@
 package review;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,11 +24,26 @@ public class StringMaxLength {
                     table.remove(arr[l]);
                     l++;
                 }
+                //here arr[l]==t; that means we find the pre number equal to t;
+                //thus, l should plus one to exclude the number;
                 //table.remove(arr[l]);
                 l++;
             }
             res = Math.max(res, r-l+1);
-            table.add(r);
+            table.add(arr[r]);
+        }
+        return res;
+    }
+    public int maxLength2(int[] arr){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int res = 0;
+        int l = 0;
+        for (int r = 0; r < arr.length; r++) {
+            if (map.containsKey(arr[r])){
+                l = Math.max(l, map.get(arr[r])+1);
+            }
+            res = Math.max(res, r - l + 1);
+            map.put(arr[r], r);
         }
         return res;
     }
