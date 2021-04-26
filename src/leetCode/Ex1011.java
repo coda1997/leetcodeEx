@@ -1,7 +1,5 @@
 package leetCode;
 
-import java.util.Arrays;
-
 public class Ex1011 {
     public int shipWithinDays(int[] weights, int D) {
         int left = 0;
