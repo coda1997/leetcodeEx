@@ -19,7 +19,7 @@ fun maxProfit(k: Int, prices: IntArray): Int {
             cost[j][1] = max(cost[j][1], cost[j - 1][0] - prices[i])
         }
     }
-    return cost.maxBy { it[0] }?.get(0) ?: 0
+    return cost.maxByOrNull { it[0] }?.get(0) ?: 0
 }
 
 

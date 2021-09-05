@@ -21,7 +21,7 @@ fun maximalSquare(matrix: Array<CharArray>): Int {
             t[i][j] = min(t[i - 1][j - 1], min(t[i][j - 1], t[i - 1][j])) + 1
         }
     }
-    val root = t.map { it.max() }.maxBy { it ?: 0 } ?: 0
+    val root = t.map { it.maxOrNull() }.maxByOrNull { it ?: 0 } ?: 0
     return root*root
 }
 

@@ -15,7 +15,7 @@ fun lengthOfLIS(nums: IntArray): Int {
             }
         }
     }
-    return tt.max()?:1
+    return tt.maxOrNull() ?:1
 }
 
 fun main() {
